@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B027FE19F0843D001C4C7F /* AppDelegate.swift */; };
 		D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0280019F0843D001C4C7F /* ViewController.swift */; };
-		D9B0280419F0843D001C4C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280219F0843D001C4C7F /* Main.storyboard */; };
 		D9B0280619F0843D001C4C7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280519F0843D001C4C7F /* Images.xcassets */; };
 		D9B0280919F0843D001C4C7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280719F0843D001C4C7F /* LaunchScreen.xib */; };
 		D9B0281519F0843E001C4C7F /* AlphaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0281419F0843E001C4C7F /* AlphaTests.swift */; };
+		D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */; };
+		D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3019F46105000B5EEC /* fortunes.swift */; };
+		D9FC0E3819F46C20000B5EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FC0E3619F46C20000B5EEC /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +32,14 @@
 		D9B027FD19F0843D001C4C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B027FE19F0843D001C4C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B0280019F0843D001C4C7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D9B0280319F0843D001C4C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B0280519F0843D001C4C7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9B0280819F0843D001C4C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D9B0280E19F0843E001C4C7F /* AlphaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B0281319F0843E001C4C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B0281419F0843E001C4C7F /* AlphaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTests.swift; sourceTree = "<group>"; };
+		D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneGroup.swift; sourceTree = "<group>"; };
+		D9FC0E3019F46105000B5EEC /* fortunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fortunes.swift; sourceTree = "<group>"; };
+		D9FC0E3719F46C20000B5EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,9 @@
 			children = (
 				D9B027FE19F0843D001C4C7F /* AppDelegate.swift */,
 				D9B0280019F0843D001C4C7F /* ViewController.swift */,
-				D9B0280219F0843D001C4C7F /* Main.storyboard */,
+				D9FC0E3919F46C6F000B5EEC /* Fortune */,
 				D9B0280519F0843D001C4C7F /* Images.xcassets */,
+				D9FC0E3619F46C20000B5EEC /* Main.storyboard */,
 				D9B0280719F0843D001C4C7F /* LaunchScreen.xib */,
 				D9B027FC19F0843D001C4C7F /* Supporting Files */,
 			);
@@ -110,6 +115,15 @@
 				D9B0281319F0843E001C4C7F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9FC0E3919F46C6F000B5EEC /* Fortune */ = {
+			isa = PBXGroup;
+			children = (
+				D9FC0E3019F46105000B5EEC /* fortunes.swift */,
+				D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */,
+			);
+			name = Fortune;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B0280419F0843D001C4C7F /* Main.storyboard in Resources */,
+				D9FC0E3819F46C20000B5EEC /* Main.storyboard in Resources */,
 				D9B0280919F0843D001C4C7F /* LaunchScreen.xib in Resources */,
 				D9B0280619F0843D001C4C7F /* Images.xcassets in Resources */,
 			);
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */,
 				D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */,
 				D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */,
+				D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,20 +252,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D9B0280219F0843D001C4C7F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9B0280319F0843D001C4C7F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D9B0280719F0843D001C4C7F /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D9B0280819F0843D001C4C7F /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D9FC0E3619F46C20000B5EEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9FC0E3719F46C20000B5EEC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,6 +421,7 @@
 				D9B0281A19F0843E001C4C7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9B0281B19F0843E001C4C7F /* Build configuration list for PBXNativeTarget "AlphaTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +430,7 @@
 				D9B0281D19F0843E001C4C7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
