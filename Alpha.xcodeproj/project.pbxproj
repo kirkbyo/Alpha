@@ -15,6 +15,7 @@
 		D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */; };
 		D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3019F46105000B5EEC /* fortunes.swift */; };
 		D9FC0E3819F46C20000B5EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FC0E3619F46C20000B5EEC /* Main.storyboard */; };
+		D9FC0E3B19F46D18000B5EEC /* quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3A19F46D18000B5EEC /* quotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneGroup.swift; sourceTree = "<group>"; };
 		D9FC0E3019F46105000B5EEC /* fortunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fortunes.swift; sourceTree = "<group>"; };
 		D9FC0E3719F46C20000B5EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9FC0E3A19F46D18000B5EEC /* quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				D9B027FE19F0843D001C4C7F /* AppDelegate.swift */,
 				D9B0280019F0843D001C4C7F /* ViewController.swift */,
+				D9FC0E3E19F46EE1000B5EEC /* Quotes */,
 				D9FC0E3919F46C6F000B5EEC /* Fortune */,
 				D9B0280519F0843D001C4C7F /* Images.xcassets */,
 				D9FC0E3619F46C20000B5EEC /* Main.storyboard */,
@@ -124,6 +127,14 @@
 				D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */,
 			);
 			name = Fortune;
+			sourceTree = "<group>";
+		};
+		D9FC0E3E19F46EE1000B5EEC /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				D9FC0E3A19F46D18000B5EEC /* quotes.swift */,
+			);
+			name = Quotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */,
 				D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */,
 				D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */,
+				D9FC0E3B19F46D18000B5EEC /* quotes.swift in Sources */,
 				D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
