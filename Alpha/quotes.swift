@@ -11,16 +11,25 @@ import UIKit
 
 class quotes: UIViewController {
     
+    let utility = Utility()
     @IBOutlet weak var quoteDisplay: UILabel!
     @IBOutlet weak var authorDisplay: UILabel!
+    @IBOutlet weak var quoteBackground: UIImageView!
     
     let date = NSDate()
-
     var Author: String = ""
     var Quote: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentTime = utility.currentTime()
+        if (currentTime >= 14 ) {
+            println("Time is greater then 14")
+            quoteBackground.image = UIImage(named: "quote_background")
+        } else {
+            println("Time is not greater then 14")
+            quoteBackground.image = UIImage(named:"morning_quote_background")
+        }
     }
     
     @IBAction func newQuote() {

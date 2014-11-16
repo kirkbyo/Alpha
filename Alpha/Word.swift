@@ -10,9 +10,23 @@ import Foundation
 import UIKit
 
 class WordsController: UIViewController {
-
+    
+    let utility = Utility()
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var currentTime = utility.currentTime()
+        if (currentTime >= 14 ) {
+            println("Time is greater then 14")
+            backgroundView.image = UIImage(named: "word_background")
+        } else {
+            println("Time is not greater then 14")
+            backgroundView.image = UIImage(named:"morning_word_background")
+        }
+    }
     
     var word: String = ""
     var definition: String = ""

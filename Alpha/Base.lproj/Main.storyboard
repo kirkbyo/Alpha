@@ -118,6 +118,7 @@
                     </view>
                     <connections>
                         <outlet property="authorDisplay" destination="NS8-Ye-BxB" id="Tan-Jb-rDt"/>
+                        <outlet property="quoteBackground" destination="tVQ-Ce-b00" id="MEb-S0-OM0"/>
                         <outlet property="quoteDisplay" destination="ONR-ux-aNg" id="uS6-ff-ZTQ"/>
                     </connections>
                 </viewController>
@@ -200,6 +201,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="AnT-qu-P9r" id="XCm-8w-fwg"/>
                         <outlet property="definitionLabel" destination="Ddh-uA-PGb" id="Fhm-S6-rlz"/>
                         <outlet property="wordLabel" destination="4uz-dB-GDS" id="4WB-fR-PD2"/>
                     </connections>
@@ -326,6 +328,7 @@
                     <navigationItem key="navigationItem" id="Ymy-9I-R4L"/>
                     <connections>
                         <outlet property="displayFortune" destination="4jq-uO-JBv" id="zWU-1w-lB6"/>
+                        <outlet property="fortuneBackground" destination="66p-SU-X16" id="5n3-xP-84p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc2-gX-cHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,6 +350,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="EZZ-r6-Sc3"/>
+        <segue reference="znm-12-ROp"/>
     </inferredMetricsTieBreakers>
 </document>
