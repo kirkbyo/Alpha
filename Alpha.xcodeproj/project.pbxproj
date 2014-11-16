@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D907B82F1A17EE4F004C6C67 /* QuotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D907B82E1A17EE4F004C6C67 /* QuotesList.plist */; };
 		D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B027FE19F0843D001C4C7F /* AppDelegate.swift */; };
 		D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0280019F0843D001C4C7F /* ViewController.swift */; };
 		D9B0280619F0843D001C4C7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280519F0843D001C4C7F /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D907B82E1A17EE4F004C6C67 /* QuotesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuotesList.plist; sourceTree = "<group>"; };
 		D9B027F919F0843D001C4C7F /* Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B027FD19F0843D001C4C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B027FE19F0843D001C4C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FC0E3A19F46D18000B5EEC /* quotes.swift */,
+				D907B82E1A17EE4F004C6C67 /* QuotesList.plist */,
 			);
 			name = Quotes;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				D9FC0E3819F46C20000B5EEC /* Main.storyboard in Resources */,
 				D9B0280919F0843D001C4C7F /* LaunchScreen.xib in Resources */,
 				D9B0280619F0843D001C4C7F /* Images.xcassets in Resources */,
+				D907B82F1A17EE4F004C6C67 /* QuotesList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
