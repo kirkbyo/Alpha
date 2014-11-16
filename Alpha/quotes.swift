@@ -14,6 +14,8 @@ class quotes: UIViewController {
     @IBOutlet weak var quoteDisplay: UILabel!
     @IBOutlet weak var authorDisplay: UILabel!
     
+    let date = NSDate()
+
     var Author: String = ""
     var Quote: String = ""
     
@@ -46,6 +48,6 @@ class quotes: UIViewController {
         Quote = chosenQuote
         
         quoteDisplay.text = Quote
-        authorDisplay.text = Author
+        authorDisplay.text = Author.uppercaseString
     }
 }
