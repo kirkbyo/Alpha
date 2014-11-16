@@ -51,6 +51,51 @@
             </objects>
             <point key="canvasLocation" x="-487" y="-718"/>
         </scene>
+        <!--Words Controller-->
+        <scene sceneID="wOb-h2-jZ1">
+            <objects>
+                <viewController id="OfP-v8-Nz0" customClass="WordsController" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6YF-Hg-sk8"/>
+                        <viewControllerLayoutGuide type="bottom" id="gKk-Ms-xhH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7eX-8E-fdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-uA-PGb">
+                                <rect key="frame" x="16" y="229" width="288" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBI-Bf-fTq">
+                                <rect key="frame" x="137" y="503" width="71" height="30"/>
+                                <state key="normal" title="New Word">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newWord" destination="OfP-v8-Nz0" eventType="touchUpInside" id="wr1-qi-vCw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uz-dB-GDS">
+                                <rect key="frame" x="16" y="200" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="Ddh-uA-PGb" id="Fhm-S6-rlz"/>
+                        <outlet property="wordLabel" destination="4uz-dB-GDS" id="4WB-fR-PD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8p-2J-ZBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-710"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -79,6 +124,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="YR8-cj-OA5" kind="modal" id="dyE-RL-fwu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-fY-gsI">
+                                <rect key="frame" x="137" y="172" width="44" height="30"/>
+                                <state key="normal" title="Words">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OfP-v8-Nz0" kind="modal" id="YBc-Sv-dG2"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -14,8 +14,8 @@ class quotes: UIViewController {
     @IBOutlet weak var quoteDisplay: UILabel!
     @IBOutlet weak var authorDisplay: UILabel!
     
-    var Author : String = ""
-    var Quote : String = ""
+    var Author: String = ""
+    var Quote: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
