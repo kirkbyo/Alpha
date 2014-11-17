@@ -47,6 +47,11 @@ class Fortunes: UIViewController {
         displayFortune.text = fortunes.randomFortune()
     }
     
+    
+    //============================//
+    //***** Sharing Features *****//
+    //============================//
+    
     @IBAction func shareTweet(sender: AnyObject) {
         
         func shareTwitter(tweetText: String) {

@@ -12,10 +12,19 @@ import Social
 
 class WordsController: UIViewController {
     
+    //============================//
+    //********** Outlets *********//
+    //============================//
+    
     let utility = Utility()
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var backgroundView: UIImageView!
+    
+    
+    //============================//
+    //********** General *********//
+    //============================//
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +39,10 @@ class WordsController: UIViewController {
     
     var word: String = ""
     var definition: String = ""
+    
+    //============================//
+    //********** New Word *********//
+    //============================//
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
@@ -58,6 +71,11 @@ class WordsController: UIViewController {
         wordLabel.text = word
         definitionLabel.text = definition
     }
+    
+    
+    //============================//
+    //***** Sharing Features *****//
+    //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
         

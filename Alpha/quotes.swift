@@ -12,10 +12,18 @@ import Social
 
 class quotes: UIViewController {
     
+    //============================//
+    //********** Outlets *********//
+    //============================//
+    
     let utility = Utility()
     @IBOutlet weak var quoteDisplay: UILabel!
     @IBOutlet weak var authorDisplay: UILabel!
     @IBOutlet weak var quoteBackground: UIImageView!
+    
+    //============================//
+    //********** General *********//
+    //============================//
     
     let date = NSDate()
     var Author: String = ""
@@ -32,33 +40,44 @@ class quotes: UIViewController {
             quoteBackground.image = UIImage(named:"morning_quote_background.png")
         }
     }
-
+    
+    //============================//
+    //********* New Quote ********//
+    //============================//
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-            func randomNumber(arrayLength: Int) -> Int {
-                var unsignedArrayCount = UInt32(arrayLength)
-                var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-                var randomNumber = Int(unsignedRandomNumber)
-                
-                return randomNumber
-            }
+        
+        // Generates Random Number
+        func randomNumber(arrayLength: Int) -> Int {
+            var unsignedArrayCount = UInt32(arrayLength)
+            var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+            var randomNumber = Int(unsignedRandomNumber)
             
-            // Importing Quotes plist File
-            let quotePath = NSBundle.mainBundle().pathForResource("QuotesList", ofType: "plist")
-            let dictionary: NSDictionary = NSDictionary(contentsOfFile: quotePath!)!
-            let quoteDictionary: Dictionary = dictionary
-            let quoteStringArray = [String](map(quoteDictionary.keys) { $0 as AnyObject as String })
-            
-            // Selects Quote
-            let chosenQuote = quoteStringArray[randomNumber(quoteDictionary.count)]
-            let chosenAuthor = quoteDictionary[chosenQuote] as NSString as String
-            
-            // Assigns Quote & Author to IBOutlet
-            Author = chosenAuthor
-            Quote = chosenQuote
-            
-            quoteDisplay.text = Quote
-            authorDisplay.text = Author.uppercaseString
+            return randomNumber
         }
+        
+        // Importing Quotes plist File
+        let quotePath = NSBundle.mainBundle().pathForResource("QuotesList", ofType: "plist")
+        let dictionary: NSDictionary = NSDictionary(contentsOfFile: quotePath!)!
+        let quoteDictionary: Dictionary = dictionary
+        let quoteStringArray = [String](map(quoteDictionary.keys) { $0 as AnyObject as String })
+        
+        // Selects Quote
+        let chosenQuote = quoteStringArray[randomNumber(quoteDictionary.count)]
+        let chosenAuthor = quoteDictionary[chosenQuote] as NSString as String
+        
+        // Assigns Quote & Author to IBOutlet
+        Author = chosenAuthor
+        Quote = chosenQuote
+        
+        quoteDisplay.text = Quote
+        authorDisplay.text = Author.uppercaseString
+    }
+    
+    
+    //============================//
+    //***** Social Features ******//
+    //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
         
