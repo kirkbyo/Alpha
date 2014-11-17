@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Social
 
 class WordsController: UIViewController {
     
@@ -18,20 +19,20 @@ class WordsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var currentTime = utility.currentTime()
-        if (currentTime >= 14 ) {
-            println("Time is greater then 14")
-            backgroundView.image = UIImage(named: "word_background")
+        if (currentTime >= 15 ) {
+            backgroundView.image = UIImage(named: "word_background.png")
         } else {
-            println("Time is not greater then 14")
-            backgroundView.image = UIImage(named:"morning_word_background")
+            backgroundView.image = UIImage(named:"morning_word_background.png")
         }
     }
     
     var word: String = ""
     var definition: String = ""
     
-    @IBAction func newWord() {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
         func randomNumber(arrayLength: Int) -> Int {
             var unsignedArrayCount = UInt32(arrayLength)
             var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
@@ -58,4 +59,57 @@ class WordsController: UIViewController {
         definitionLabel.text = definition
     }
     
+    @IBAction func shareTweet(sender: AnyObject) {
+        
+        func shareTwitter(tweetText: String) {
+            
+            // Gets Length of Quote
+            var characterCount: Int = countElements(word)
+            
+            if (characterCount < 140) {
+                
+                if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)) {
+                    
+                    // Tweets Quote
+                    var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                    tweetSheet.setInitialText("\(tweetText)")
+                    self.presentViewController(tweetSheet, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    // Not logged into Twitter
+                    var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+            } else {
+                // Character Count is greater then 140
+                var alert = UIAlertController(title: "Character Count", message: "Sorry this word is too long to tweet", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        shareTwitter("\(word): \(definition)")
+    }
+    
+    @IBAction func shareFacebook(sender: AnyObject) {
+        
+        func shareFacebook(facebookText: String) {
+            
+            // Shares Quotes to facebook
+            if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook)) {
+                // Shares Quote
+                var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                tweetSheet.setInitialText("\(facebookText)")
+                self.presentViewController(tweetSheet, animated: true, completion: nil)
+                
+            } else {
+                // Not logged into facebook
+                var alert = UIAlertController(title: "Accounts", message: "Please login to a facebook account to share", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        shareFacebook("\(word): \(definition)")
+    }
 }

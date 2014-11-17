@@ -7,17 +7,19 @@
 //
 
 import Foundation
+import Social
+import UIKit
+
 
 struct Utility {
     
     func currentTime() -> Int {
         let calendar = NSCalendar.currentCalendar()
         var date = NSDate()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let components = calendar.components(.CalendarUnitHour, fromDate: date)
         let hour = components.hour
-        let minutes = components.minute
-        println(hour)
         
         return hour
     }
+    
 }

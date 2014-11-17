@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Social
 
 class Fortunes: UIViewController {
     //============================//
@@ -28,18 +29,12 @@ class Fortunes: UIViewController {
         displayFortune.text = fortunes.randomFortune()
         
         var currentTime = utility.currentTime()
-        if (currentTime >= 14 ) {
-            println("Time is greater then 14")
-            fortuneBackground.image = UIImage(named: "fortune_background")
+        if (currentTime >= 15 ) {
+            fortuneBackground.image = UIImage(named: "fortune_background.png")
         } else {
-            println("Time is not greater then 14")
-            fortuneBackground.image = UIImage(named:"morning_fortune_background")
+            fortuneBackground.image = UIImage(named:"morning_fortunes_background.png")
         }
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     //============================//
@@ -48,7 +43,61 @@ class Fortunes: UIViewController {
     
     let fortunes = fortunesGroup()
     
-    @IBAction func newFortune() {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         displayFortune.text = fortunes.randomFortune()
+    }
+    
+    @IBAction func shareTweet(sender: AnyObject) {
+        
+        func shareTwitter(tweetText: String) {
+            
+            // Gets Length of Quote
+            var characterCount: Int = countElements(fortunes.randomFortune())
+            
+            if (characterCount < 140) {
+                
+                if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)) {
+                    
+                    // Tweets Quote
+                    var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                    tweetSheet.setInitialText("\(tweetText)")
+                    self.presentViewController(tweetSheet, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    // Not logged into Twitter
+                    var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+            } else {
+                // Character Count is greater then 140
+                var alert = UIAlertController(title: "Character Count", message: "Sorry this fortune is too long to tweet", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        shareTwitter(fortunes.randomFortune())
+    }
+    
+    @IBAction func shareFacebook(sender: AnyObject) {
+        
+        func shareFacebook(facebookText: String) {
+            
+            // Shares Quotes to facebook
+            if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook)) {
+                // Shares Quote
+                var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                tweetSheet.setInitialText("\(facebookText)")
+                self.presentViewController(tweetSheet, animated: true, completion: nil)
+                
+            } else {
+                // Not logged into facebook
+                var alert = UIAlertController(title: "Accounts", message: "Please login to a facebook account to share", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        shareFacebook(fortunes.randomFortune())
     }
 }

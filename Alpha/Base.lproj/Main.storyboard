@@ -18,9 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote_background" translatesAutoresizingMaskIntoConstraints="NO" id="tVQ-Ce-b00">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="tVQ-Ce-b00">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emp-22-i1v">
+                                <rect key="frame" x="16" y="28" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="msH-K3-ujZ"/>
+                                    <constraint firstAttribute="width" constant="15" id="ouq-K8-srf"/>
+                                </constraints>
+                                <state key="normal" image="return">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="7ci-od-Z1h"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is during our darkest moments that we must focus to see the light." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-ux-aNg">
                                 <rect key="frame" x="16" y="102" width="288" height="310"/>
                                 <constraints>
@@ -51,15 +64,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emp-22-i1v">
-                                <rect key="frame" x="16" y="20" width="15" height="25"/>
-                                <state key="normal" image="return">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="7ci-od-Z1h"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZG-wA-3sS">
                                 <rect key="frame" x="108" y="503" width="45" height="45"/>
                                 <constraints>
@@ -108,9 +112,11 @@
                             <constraint firstItem="OZG-wA-3sS" firstAttribute="leading" secondItem="LAJ-aU-K7h" secondAttribute="leadingMargin" constant="92" id="OlF-so-oHe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NS8-Ye-BxB" secondAttribute="trailing" id="Pum-FZ-y87"/>
                             <constraint firstItem="tVQ-Ce-b00" firstAttribute="leading" secondItem="LAJ-aU-K7h" secondAttribute="leadingMargin" constant="-16" id="Toi-j2-fIU"/>
+                            <constraint firstItem="emp-22-i1v" firstAttribute="top" secondItem="rcJ-OW-Ule" secondAttribute="bottom" constant="8" id="Wbm-5Y-1nd"/>
                             <constraint firstItem="QdN-PT-7GW" firstAttribute="top" secondItem="OZG-wA-3sS" secondAttribute="bottom" constant="20" id="YtF-xn-8xs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tVQ-Ce-b00" secondAttribute="trailing" constant="-16" id="fde-mP-8Rv"/>
                             <constraint firstAttribute="centerX" secondItem="zlF-f4-Ft1" secondAttribute="centerX" id="gZa-CF-0bT"/>
+                            <constraint firstItem="emp-22-i1v" firstAttribute="leading" secondItem="LAJ-aU-K7h" secondAttribute="leadingMargin" id="gd8-UU-99L"/>
                             <constraint firstAttribute="centerX" secondItem="ONR-ux-aNg" secondAttribute="centerX" id="hEP-c0-huq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xSD-35-bsN" secondAttribute="trailing" constant="92" id="t0e-EG-je8"/>
                             <constraint firstItem="tVQ-Ce-b00" firstAttribute="top" secondItem="LAJ-aU-K7h" secondAttribute="topMargin" id="wmK-3m-8m8"/>
@@ -138,18 +144,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_background" translatesAutoresizingMaskIntoConstraints="NO" id="AnT-qu-P9r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="AnT-qu-P9r">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-uA-PGb">
-                                <rect key="frame" x="16" y="194" width="288" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Mvn-tl-XKT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBI-Bf-fTq">
                                 <rect key="frame" x="125" y="447" width="71" height="30"/>
                                 <state key="normal" title="New Word">
@@ -168,20 +165,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-P2-7Tp">
-                                <rect key="frame" x="167" y="503" width="45" height="45"/>
-                                <state key="normal" image="Twitter-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-09-SdC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-09-SdC">
                                 <rect key="frame" x="16" y="28" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Inb-GQ-4vJ"/>
+                                    <constraint firstAttribute="width" constant="15" id="jfY-ry-eFy"/>
+                                </constraints>
                                 <state key="normal" image="return">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="EZZ-r6-Sc3"/>
                                 </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-uA-PGb">
+                                <rect key="frame" x="16" y="194" width="288" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Mvn-tl-XKT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-P2-7Tp">
+                                <rect key="frame" x="167" y="503" width="45" height="45"/>
+                                <state key="normal" image="Twitter-Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfb-8A-YG3">
                                 <rect key="frame" x="108" y="503" width="45" height="45"/>
@@ -193,11 +203,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4uz-dB-GDS" firstAttribute="leading" secondItem="7eX-8E-fdJ" secondAttribute="leadingMargin" id="0lP-Co-2BH"/>
+                            <constraint firstItem="wjf-09-SdC" firstAttribute="leading" secondItem="7eX-8E-fdJ" secondAttribute="leadingMargin" id="3XA-KP-DsD"/>
                             <constraint firstItem="Ddh-uA-PGb" firstAttribute="leading" secondItem="7eX-8E-fdJ" secondAttribute="leadingMargin" id="DBU-Fm-K8x"/>
                             <constraint firstItem="Ddh-uA-PGb" firstAttribute="top" secondItem="4uz-dB-GDS" secondAttribute="bottom" constant="8" id="GD3-Mt-Ywh"/>
                             <constraint firstItem="Ddh-uA-PGb" firstAttribute="trailing" secondItem="7eX-8E-fdJ" secondAttribute="trailingMargin" id="Mc7-ER-0hW"/>
                             <constraint firstItem="4uz-dB-GDS" firstAttribute="top" secondItem="6YF-Hg-sk8" secondAttribute="bottom" constant="145" id="dsV-ic-0oX"/>
                             <constraint firstItem="4uz-dB-GDS" firstAttribute="trailing" secondItem="7eX-8E-fdJ" secondAttribute="trailingMargin" id="fwy-uc-W8m"/>
+                            <constraint firstItem="wjf-09-SdC" firstAttribute="top" secondItem="6YF-Hg-sk8" secondAttribute="bottom" constant="8" id="z9f-0D-aPz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -269,19 +281,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fortune_background" translatesAutoresizingMaskIntoConstraints="NO" id="66p-SU-X16">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fortune_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="66p-SU-X16">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFC-hV-uk3">
-                                <rect key="frame" x="108" y="503" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="2U6-v6-GoR"/>
-                                    <constraint firstAttribute="height" constant="45" id="4sD-Zv-CDg"/>
-                                </constraints>
-                                <state key="normal" image="Facebook-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdO-X4-AfE">
                                 <rect key="frame" x="167" y="503" width="45" height="45"/>
                                 <constraints>
@@ -292,14 +294,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-wR-ahS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-wR-ahS">
                                 <rect key="frame" x="16" y="28" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="Swe-zp-qB2"/>
+                                    <constraint firstAttribute="height" constant="25" id="t0q-HR-RB6"/>
+                                </constraints>
                                 <state key="normal" image="return">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="znm-12-ROp"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFC-hV-uk3">
+                                <rect key="frame" x="108" y="503" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="2U6-v6-GoR"/>
+                                    <constraint firstAttribute="height" constant="45" id="4sD-Zv-CDg"/>
+                                </constraints>
+                                <state key="normal" image="Facebook-Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The value lies not within any particular thing, but in the desire placed on that thing." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-uO-JBv">
                                 <rect key="frame" x="16" y="145" width="288" height="202"/>
@@ -320,8 +336,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cdO-X4-AfE" secondAttribute="trailing" constant="92" id="7sC-N4-oio"/>
+                            <constraint firstItem="BFZ-wR-ahS" firstAttribute="top" secondItem="YFS-E7-Reg" secondAttribute="bottom" constant="8" id="KQM-Yb-FCt"/>
                             <constraint firstItem="fXf-as-hUD" firstAttribute="top" secondItem="cdO-X4-AfE" secondAttribute="bottom" constant="20" id="MYr-iK-htW"/>
                             <constraint firstItem="fXf-as-hUD" firstAttribute="top" secondItem="OFC-hV-uk3" secondAttribute="bottom" constant="20" id="go5-Tc-BGV"/>
+                            <constraint firstItem="BFZ-wR-ahS" firstAttribute="leading" secondItem="2xu-zU-aGV" secondAttribute="leadingMargin" id="wXb-65-28n"/>
                             <constraint firstItem="OFC-hV-uk3" firstAttribute="leading" secondItem="2xu-zU-aGV" secondAttribute="leadingMargin" constant="92" id="yqf-24-mHj"/>
                         </constraints>
                     </view>
@@ -339,10 +357,10 @@
     <resources>
         <image name="Facebook-Share" width="90" height="90"/>
         <image name="Twitter-Share" width="90" height="90"/>
-        <image name="fortune_background" width="2344" height="1976"/>
-        <image name="quote_background" width="1347" height="1712"/>
+        <image name="fortune_background.png" width="2344" height="1976"/>
+        <image name="quote_background.png" width="1347" height="1712"/>
         <image name="return" width="33" height="53"/>
-        <image name="word_background" width="2520" height="2008"/>
+        <image name="word_background.png" width="2520" height="2008"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -350,6 +368,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="znm-12-ROp"/>
+        <segue reference="EZZ-r6-Sc3"/>
     </inferredMetricsTieBreakers>
 </document>
