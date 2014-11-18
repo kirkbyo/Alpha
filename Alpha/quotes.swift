@@ -34,7 +34,7 @@ class quotes: UIViewController {
         
         // Checks if time is greater then 3pm to change background
         var currentTime = utility.currentTime()
-        if (currentTime >= 14 ) {
+        if (currentTime >= 15 ) {
             quoteBackground.image = UIImage(named: "quote_background.png")
         } else {
             quoteBackground.image = UIImage(named:"morning_quote_background.png")

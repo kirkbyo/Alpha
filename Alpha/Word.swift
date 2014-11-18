@@ -31,9 +31,9 @@ class WordsController: UIViewController {
         
         var currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
-            backgroundView.image = UIImage(named: "word_background.png")
+            backgroundView.image = UIImage(named: "home_background.png")
         } else {
-            backgroundView.image = UIImage(named:"morning_word_background.png")
+            backgroundView.image = UIImage(named:"morning_home_background.png")
         }
     }
     
