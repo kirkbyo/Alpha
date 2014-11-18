@@ -26,8 +26,8 @@ class Fortunes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayFortune.text = fortunes.randomFortune()
         
+        // Checks if time is greater then 3pm to change background
         var currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             fortuneBackground.image = UIImage(named: "fortune_background.png")

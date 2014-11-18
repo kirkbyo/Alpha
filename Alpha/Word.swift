@@ -29,6 +29,7 @@ class WordsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Checks if time is greater then 3pm to change background
         var currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             backgroundView.image = UIImage(named: "home_background.png")

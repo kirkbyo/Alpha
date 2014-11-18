@@ -10,13 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let utility = Utility()
     
+    //============================//
+    //********** Outlets *********//
+    //============================//
+    
+    let utility = Utility()
     @IBOutlet weak var quotesButton: UIButton!
     @IBOutlet weak var fortunesButton: UIButton!
     @IBOutlet weak var wordsButton: UIButton!
     @IBOutlet weak var backgroundView: UIImageView!
     
+    //============================//
+    //********** General *********//
+    //============================//
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,7 @@ class ViewController: UIViewController {
         let borderColor: UIColor = UIColor(red: 1.0, green: 1.0, blue:1.0, alpha: 1.0)
         let borderRadius: CGFloat = 1.5
         
+        // Adds border on buttons
         quotesButton.layer.borderColor = borderColor.CGColor
         quotesButton.layer.borderWidth = borderRadius
         
@@ -33,6 +41,7 @@ class ViewController: UIViewController {
         wordsButton.layer.borderColor = borderColor.CGColor
         wordsButton.layer.borderWidth = borderRadius
         
+        // Checks if time is greater then 3pm to change background
         var currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             backgroundView.image = UIImage(named: "home_background.png")

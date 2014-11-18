@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hUt-7Z-Xc9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is during our darkest moments that we must focus to see the light." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2r-eW-2oR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2r-eW-2oR">
                                 <rect key="frame" x="41" y="115" width="518" height="310"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="V4n-Tj-ouO"/>
@@ -29,7 +29,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARISTOTLE ONASSIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2Z-w3-rAp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2Z-w3-rAp">
                                 <rect key="frame" x="156" y="76" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="5VN-Eh-An8"/>
@@ -134,7 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning_home_background" translatesAutoresizingMaskIntoConstraints="NO" id="C2p-nR-GRR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning_home_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2p-nR-GRR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alpha-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MD8-Rg-SFT">
@@ -144,20 +144,6 @@
                                     <constraint firstAttribute="height" constant="79" id="hxi-if-DUO"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79S-rR-dnj">
-                                <rect key="frame" x="170" y="222" width="260" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="3tb-ZU-beP"/>
-                                    <constraint firstAttribute="width" constant="260" id="JyG-fE-Top"/>
-                                </constraints>
-                                <state key="normal" title="Quotes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dDy-SU-oWP" kind="presentation" id="s5R-8Z-Q0W"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MK-Eb-fGt">
                                 <rect key="frame" x="170" y="285" width="260" height="43"/>
                                 <constraints>
@@ -184,6 +170,20 @@
                                 </state>
                                 <connections>
                                     <segue destination="EFv-oL-d1I" kind="presentation" id="pMi-LI-fhD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79S-rR-dnj">
+                                <rect key="frame" x="170" y="222" width="260" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3tb-ZU-beP"/>
+                                    <constraint firstAttribute="width" constant="260" id="JyG-fE-Top"/>
+                                </constraints>
+                                <state key="normal" title="Quotes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dDy-SU-oWP" kind="presentation" id="s5R-8Z-Q0W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,7 +277,7 @@
                                     <segue destination="rkd-oG-IV9" kind="show" id="KRx-oY-Rqp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The value lies not within any particular thing, but in the desire placed on that thing." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ6-5a-nQl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a new fortune" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ6-5a-nQl">
                                 <rect key="frame" x="65" y="157" width="471" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="bv7-8j-irv"/>
@@ -339,7 +339,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="word_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-OL-a2I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-0L-v8H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-0L-v8H">
                                 <rect key="frame" x="16" y="156" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="atw-Ko-iD5"/>
@@ -387,8 +387,7 @@
                                     <action selector="shareFacebook:" destination="EFv-oL-d1I" eventType="touchUpInside" id="sLe-dE-rvC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-99-gIl">
-                                <rect key="frame" x="16" y="185" width="568" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-99-gIl">
                                 <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -432,11 +431,11 @@
         <image name="Twitter-Share" width="90" height="90"/>
         <image name="back" width="61" height="71"/>
         <image name="fortune_background.png" width="2344" height="1976"/>
-        <image name="morning_home_background" width="2432" height="1728"/>
+        <image name="morning_home_background.png" width="2432" height="1728"/>
         <image name="quote_background.png" width="1347" height="1712"/>
         <image name="word_background.png" width="2520" height="2008"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F6x-03-7sA"/>
+        <segue reference="DxY-ig-ibl"/>
     </inferredMetricsTieBreakers>
 </document>
