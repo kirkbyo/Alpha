@@ -286,10 +286,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fortune" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTG-3Z-ft8">
+                                <rect key="frame" x="250" y="39" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="fDt-5i-LDQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="sva-5c-YAU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="2hc-X5-rFD" secondAttribute="bottom" constant="20" id="1KT-Bo-aY7"/>
+                            <constraint firstItem="HTG-3Z-ft8" firstAttribute="top" secondItem="kCV-Le-rsy" secondAttribute="bottom" constant="19" id="3Mk-eP-7Oe"/>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="eey-zf-KgH" secondAttribute="bottom" id="6jI-KX-WrE"/>
                             <constraint firstItem="2hc-X5-rFD" firstAttribute="leading" secondItem="KjC-XS-8xP" secondAttribute="trailing" constant="154" id="7Li-Dp-d3b"/>
                             <constraint firstAttribute="centerX" secondItem="LQ6-5a-nQl" secondAttribute="centerX" id="7bi-cJ-DwY"/>
@@ -301,6 +312,7 @@
                             <constraint firstItem="eey-zf-KgH" firstAttribute="leading" secondItem="J12-sZ-MXn" secondAttribute="leading" id="Pna-6m-Yqn"/>
                             <constraint firstItem="LQ6-5a-nQl" firstAttribute="top" secondItem="kCV-Le-rsy" secondAttribute="bottom" constant="137" id="Zhu-sQ-h2a"/>
                             <constraint firstItem="LQ6-5a-nQl" firstAttribute="leading" secondItem="J12-sZ-MXn" secondAttribute="leadingMargin" constant="49" id="eg3-jy-BUB"/>
+                            <constraint firstAttribute="centerX" secondItem="HTG-3Z-ft8" secondAttribute="centerX" id="k3G-dJ-2eu"/>
                             <constraint firstItem="zlM-gi-Tyz" firstAttribute="leading" secondItem="J12-sZ-MXn" secondAttribute="leadingMargin" id="lOS-tt-hn3"/>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="2hc-X5-rFD" secondAttribute="bottom" constant="20" id="lXg-jH-R4n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2hc-X5-rFD" secondAttribute="trailing" constant="92" id="mkU-g6-zy4"/>
@@ -392,6 +404,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24D-56-XjU">
+                                <rect key="frame" x="250" y="39" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="701-6j-npy"/>
+                                    <constraint firstAttribute="width" constant="101" id="H0w-sy-CEX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -401,6 +423,7 @@
                             <constraint firstItem="1yf-PC-iRU" firstAttribute="leading" secondItem="Tgx-uK-OGU" secondAttribute="leadingMargin" constant="92" id="3eB-yC-ezB"/>
                             <constraint firstItem="iPT-Mz-7oY" firstAttribute="top" secondItem="1yf-PC-iRU" secondAttribute="bottom" constant="20" id="BIV-rT-co4"/>
                             <constraint firstItem="Yxe-99-gIl" firstAttribute="leading" secondItem="Tgx-uK-OGU" secondAttribute="leadingMargin" id="Ckw-UC-kFk"/>
+                            <constraint firstItem="24D-56-XjU" firstAttribute="top" secondItem="vys-jj-UB5" secondAttribute="bottom" constant="19" id="Dxy-ku-Egc"/>
                             <constraint firstItem="GVp-OL-a2I" firstAttribute="top" secondItem="Tgx-uK-OGU" secondAttribute="top" id="HP8-8i-roc"/>
                             <constraint firstItem="GVp-OL-a2I" firstAttribute="leading" secondItem="Tgx-uK-OGU" secondAttribute="leading" id="MjM-wD-OwE"/>
                             <constraint firstItem="h5L-0L-v8H" firstAttribute="trailing" secondItem="Tgx-uK-OGU" secondAttribute="trailingMargin" id="Qgh-e9-xZ8"/>
@@ -409,7 +432,9 @@
                             <constraint firstAttribute="trailing" secondItem="GVp-OL-a2I" secondAttribute="trailing" id="ehF-wJ-Y1W"/>
                             <constraint firstItem="Yxe-99-gIl" firstAttribute="top" secondItem="h5L-0L-v8H" secondAttribute="bottom" constant="8" id="fa7-cN-2dR"/>
                             <constraint firstItem="iPT-Mz-7oY" firstAttribute="top" secondItem="v6Z-1K-pcs" secondAttribute="bottom" constant="20" id="hes-5C-IGt"/>
+                            <constraint firstAttribute="centerX" secondItem="Yxe-99-gIl" secondAttribute="centerX" id="jYO-0a-2c9"/>
                             <constraint firstItem="Yxe-99-gIl" firstAttribute="trailing" secondItem="Tgx-uK-OGU" secondAttribute="trailingMargin" id="lQs-0m-5cQ"/>
+                            <constraint firstAttribute="centerX" secondItem="24D-56-XjU" secondAttribute="centerX" id="zSn-ei-CeB"/>
                             <constraint firstItem="h5L-0L-v8H" firstAttribute="leading" secondItem="Tgx-uK-OGU" secondAttribute="leadingMargin" id="zwY-w0-w4u"/>
                         </constraints>
                     </view>
@@ -436,6 +461,6 @@
         <image name="word_background.png" width="2520" height="2008"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DxY-ig-ibl"/>
+        <segue reference="F6x-03-7sA"/>
     </inferredMetricsTieBreakers>
 </document>
