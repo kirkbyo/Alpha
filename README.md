@@ -1,22 +1,23 @@
+![Alpha Header](http://i.imgur.com/5ftUYKA.jpg)
+
 Alpha
 ============
 
-Random Number, Quotes and Fortune Generator. You can download the app [here](https://itunes.apple.com/us/app/random-things/id906520811?ls=1&mt=8).
-
-## License
-
-The Random Things is licensed under the [Simplified BSD License](https://github.com/thefirespread/RandomThings/blob/master/LICENSE). This license does not cover the image assets. All images are property of Ozzie Kirkby or owns proper licensing to be used in the application. 
-
-Feel free to use any of the code in your own application, but please do not distribute or resell any the image assets.
+Alpha is a random quote, fortune and word generator. Alpha was built as a little side project to help familiarize my self with Swift. The app is currently available in the app store, you can download it [here](https://itunes.apple.com/us/app/alpha-random-quotes-fortunes/id906520811).
 
 ## Contributing
 
-If you would like to contribute to the project you can add Random Fortunes or Random Quotes to the excel sheet or directly to the Xcode project. 
+Alpha is always looking for more quotes, fortunes and words to be added to the next release of Alpha. Rules to follow when adding quotes, fortunes and words
 
-Quotes currently holds: 137 quote
+- If you are adding quotes to the file for example, please add the quote at the bottom of the quote.plist file and have the associated author included.
+- If you are adding a quote for example, please add the quote on the left as it’s ‘key’ and the author as the ‘value’.
 
-Fortune currently holds: 64 fortunes
+Alpha Currently holds
 
-## How it works
+| Quotes  | Fortunes | Words |
+| ------------- | ------------- | ------------- |
+| 135  | 63  | 50 |
 
-I decided for random quotes to be saved and put in to a photoshop file and exported has png file. This makes the process very tedious and annoying.
+## License
+
+Alpha is licensed under the [MIT License](https://github.com/kirkbyo/Alpha/blob/master/LICENSE.md). This license does not cover the image assets. All images are property of Ozzie Kirkby or owns proper licensing to be used in the application.  
