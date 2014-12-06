@@ -1,5 +1,3 @@
-![Alpha Header](http://i.imgur.com/5ftUYKA.jpg)
-
 Alpha
 ============
 
@@ -15,8 +13,8 @@ Alpha is always looking for more quotes, fortunes and words to be added to the n
 Alpha Currently holds
 
 | Quotes  | Fortunes | Words |
-| ------------- | ------------- | ------------- |
-| 135  | 63  | 50 |
+| ------- | -------- | ----- |
+| 135     | 63       | 50    |
 
 ## License
 
