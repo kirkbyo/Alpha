@@ -47,10 +47,12 @@ class WordsController: UIViewController {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
+        // Generates a random number
         func randomNumber(arrayLength: Int) -> Int {
             var unsignedArrayCount = UInt32(arrayLength)
             var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
             var randomNumber = Int(unsignedRandomNumber)
+            
             
             return randomNumber
         }
