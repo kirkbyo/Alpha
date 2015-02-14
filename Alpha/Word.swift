@@ -45,8 +45,7 @@ class WordsController: UIViewController {
     //********** New Word *********//
     //============================//
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         // Generates a random number
         func randomNumber(arrayLength: Int) -> Int {
             var unsignedArrayCount = UInt32(arrayLength)
@@ -60,12 +59,12 @@ class WordsController: UIViewController {
         // Importing Quotes plist File
         let quotePath = NSBundle.mainBundle().pathForResource("WordsList", ofType: "plist")
         let dictionary: NSDictionary = NSDictionary(contentsOfFile: quotePath!)!
-        let wordDictionary: Dictionary = dictionary
-        let wordStringArray = [String](map(wordDictionary.keys) { $0 as AnyObject as String })
+        let wordDictionary: Dictionary = dictionary as Dictionary
+        let wordStringArray = [String](map(wordDictionary.keys) { $0 as AnyObject as! String })
         
         // Selects Quote
         let chosenWord = wordStringArray[randomNumber(wordDictionary.count)]
-        let chosenDefinition = wordDictionary[chosenWord] as NSString as String
+        let chosenDefinition = wordDictionary[chosenWord] as! NSString as String
         
         // Assigns Quote & Author to IBOutlet
         word = chosenWord
@@ -85,7 +84,7 @@ class WordsController: UIViewController {
         func shareTwitter(tweetText: String) {
             
             // Gets Length of Quote
-            var characterCount: Int = countElements(word)
+            var characterCount: Int = count(word)
             
             if (characterCount < 140) {
                 
