@@ -43,7 +43,7 @@ class Fortunes: UIViewController {
     
     let fortunes = fortunesGroup()
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         displayFortune.text = fortunes.randomFortune()
     }
     
@@ -57,7 +57,7 @@ class Fortunes: UIViewController {
         func shareTwitter(tweetText: String) {
             
             // Gets Length of Quote
-            var characterCount: Int = countElements(fortunes.randomFortune())
+            var characterCount: Int = count(fortunes.randomFortune())
             
             if (characterCount < 140) {
                 

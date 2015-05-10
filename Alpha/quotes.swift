@@ -45,8 +45,7 @@ class quotes: UIViewController {
     //********* New Quote ********//
     //============================//
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         // Generates Random Number
         func randomNumber(arrayLength: Int) -> Int {
             var unsignedArrayCount = UInt32(arrayLength)
@@ -60,12 +59,12 @@ class quotes: UIViewController {
         // Importing Quotes plist File
         let quotePath = NSBundle.mainBundle().pathForResource("QuotesList", ofType: "plist")
         let dictionary: NSDictionary = NSDictionary(contentsOfFile: quotePath!)!
-        let quoteDictionary: Dictionary = dictionary
-        let quoteStringArray = [String](map(quoteDictionary.keys) { $0 as AnyObject as String })
+        let quoteDictionary: Dictionary = dictionary as Dictionary
+        let quoteStringArray = [String](map(quoteDictionary.keys) { $0 as AnyObject as! String })
         
         // Selects Quote
         let chosenQuote = quoteStringArray[randomNumber(quoteDictionary.count)]
-        let chosenAuthor = quoteDictionary[chosenQuote] as NSString as String
+        let chosenAuthor = quoteDictionary[chosenQuote] as! NSString as String
         
         // Assigns Quote & Author to IBOutlet
         Author = chosenAuthor
@@ -85,7 +84,7 @@ class quotes: UIViewController {
         func shareTwitter(tweetText: String) {
             
             // Gets Length of Quote
-            var characterCount: Int = countElements(Quote)
+            var characterCount: Int = count(Quote)
             
             if (characterCount < 140) {
                 
