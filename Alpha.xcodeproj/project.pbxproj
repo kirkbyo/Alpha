@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D907B82F1A17EE4F004C6C67 /* QuotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D907B82E1A17EE4F004C6C67 /* QuotesList.plist */; };
+		D953ABEB1B10E96200F65620 /* ImportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953ABEA1B10E96200F65620 /* ImportList.swift */; };
+		D953ABED1B10EDB900F65620 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953ABEC1B10EDB900F65620 /* Share.swift */; };
 		D98BA8F21A1931DC005E3EEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98BA8F11A1931DC005E3EEF /* Main.storyboard */; };
 		D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B027FE19F0843D001C4C7F /* AppDelegate.swift */; };
 		D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0280019F0843D001C4C7F /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		D907B82E1A17EE4F004C6C67 /* QuotesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuotesList.plist; sourceTree = "<group>"; };
+		D953ABEA1B10E96200F65620 /* ImportList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportList.swift; sourceTree = "<group>"; };
+		D953ABEC1B10EDB900F65620 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		D98BA8F11A1931DC005E3EEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D9B027F919F0843D001C4C7F /* Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B027FD19F0843D001C4C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				D9FC0E3919F46C6F000B5EEC /* Fortune */,
 				D9B0280519F0843D001C4C7F /* Images.xcassets */,
 				D9B0280719F0843D001C4C7F /* LaunchScreen.xib */,
+				D953ABEA1B10E96200F65620 /* ImportList.swift */,
+				D953ABEC1B10EDB900F65620 /* Share.swift */,
 				D9B95AE61A1875F30080610A /* Utility.swift */,
 				D9B027FC19F0843D001C4C7F /* Supporting Files */,
 			);
@@ -262,7 +268,9 @@
 			files = (
 				D9B95AE71A1875F30080610A /* Utility.swift in Sources */,
 				D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */,
+				D953ABEB1B10E96200F65620 /* ImportList.swift in Sources */,
 				D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */,
+				D953ABED1B10EDB900F65620 /* Share.swift in Sources */,
 				D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */,
 				D9FC0E3B19F46D18000B5EEC /* quotes.swift in Sources */,
 				D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */,

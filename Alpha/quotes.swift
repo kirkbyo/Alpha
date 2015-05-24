@@ -57,14 +57,11 @@ class quotes: UIViewController {
         }
         
         // Importing Quotes plist File
-        let quotePath = NSBundle.mainBundle().pathForResource("QuotesList", ofType: "plist")
-        let dictionary: NSDictionary = NSDictionary(contentsOfFile: quotePath!)!
-        let quoteDictionary: Dictionary = dictionary as Dictionary
-        let quoteStringArray = [String](map(quoteDictionary.keys) { $0 as AnyObject as! String })
+        let quotes = ImportList(FileName: "QuotesList")
         
         // Selects Quote
-        let chosenQuote = quoteStringArray[randomNumber(quoteDictionary.count)]
-        let chosenAuthor = quoteDictionary[chosenQuote] as! NSString as String
+        let chosenQuote: String = quotes.array[randomNumber(quotes.count())] as! String
+        let chosenAuthor = quotes.dict[chosenQuote]! as String
         
         // Assigns Quote & Author to IBOutlet
         Author = chosenAuthor
@@ -80,57 +77,20 @@ class quotes: UIViewController {
     //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
-        
-        func shareTwitter(tweetText: String) {
-            
-            // Gets Length of Quote
-            var characterCount: Int = count(Quote)
-            
-            if (characterCount < 140) {
-                
-                if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)) {
-                    
-                    // Tweets Quote
-                    var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                    tweetSheet.setInitialText("\(tweetText)")
-                    self.presentViewController(tweetSheet, animated: true, completion: nil)
-                    
-                } else {
-                    
-                    // Not logged into Twitter
-                    var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-            } else {
-                // Character Count is greater then 140
-                var alert = UIAlertController(title: "Character Count", message: "Sorry this quote is too long to tweet", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
+        let share = Share(text: Quote).shareTwitter(count(Quote))
+        if let twitter = share[0] as? SLComposeViewController {
+            self.presentViewController(twitter, animated: true, completion: nil)
+        } else if let alert = share[0] as? UIAlertController {
+            self.presentViewController(alert, animated: true, completion: nil)
         }
-        shareTwitter(Quote)
     }
     
     @IBAction func shareFacebook(sender: AnyObject) {
-        
-        func shareFacebook(facebookText: String) {
-            
-            // Shares Quotes to facebook
-            if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook)) {
-                // Shares Quote
-                var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-                tweetSheet.setInitialText("\(facebookText)")
-                self.presentViewController(tweetSheet, animated: true, completion: nil)
-                
-            } else {
-                // Not logged into facebook
-                var alert = UIAlertController(title: "Accounts", message: "Please login to a facebook account to share", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
+        let share = Share(text: Quote).shareFacebook()
+        if let facebook = share[0] as? SLComposeViewController {
+            self.presentViewController(facebook, animated: true, completion: nil)
+        } else if let alert = share[0] as? UIAlertController {
+            self.presentViewController(alert, animated: true, completion: nil)
         }
-        shareFacebook(Quote)
     }
-    
-    }
+}

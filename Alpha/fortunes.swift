@@ -42,9 +42,11 @@ class Fortunes: UIViewController {
     //============================//
     
     let fortunes = fortunesGroup()
+    var fortune: String = ""
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        displayFortune.text = fortunes.randomFortune()
+        fortune = fortunes.randomFortune()
+        displayFortune.text = fortune
     }
     
     
@@ -53,56 +55,20 @@ class Fortunes: UIViewController {
     //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
-        
-        func shareTwitter(tweetText: String) {
-            
-            // Gets Length of Quote
-            var characterCount: Int = count(fortunes.randomFortune())
-            
-            if (characterCount < 140) {
-                
-                if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)) {
-                    
-                    // Tweets Quote
-                    var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                    tweetSheet.setInitialText("\(tweetText)")
-                    self.presentViewController(tweetSheet, animated: true, completion: nil)
-                    
-                } else {
-                    
-                    // Not logged into Twitter
-                    var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-            } else {
-                // Character Count is greater then 140
-                var alert = UIAlertController(title: "Character Count", message: "Sorry this fortune is too long to tweet", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
+        let share = Share(text: fortune).shareTwitter(count(fortune))
+        if let twitter = share[0] as? SLComposeViewController {
+            self.presentViewController(twitter, animated: true, completion: nil)
+        } else if let alert = share[0] as? UIAlertController {
+            self.presentViewController(alert, animated: true, completion: nil)
         }
-        shareTwitter(fortunes.randomFortune())
     }
     
     @IBAction func shareFacebook(sender: AnyObject) {
-        
-        func shareFacebook(facebookText: String) {
-            
-            // Shares Quotes to facebook
-            if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook)) {
-                // Shares Quote
-                var tweetSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-                tweetSheet.setInitialText("\(facebookText)")
-                self.presentViewController(tweetSheet, animated: true, completion: nil)
-                
-            } else {
-                // Not logged into facebook
-                var alert = UIAlertController(title: "Accounts", message: "Please login to a facebook account to share", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
+        let share = Share(text: fortune).shareFacebook()
+        if let facebook = share[0] as? SLComposeViewController {
+            self.presentViewController(facebook, animated: true, completion: nil)
+        } else if let alert = share[0] as? UIAlertController {
+            self.presentViewController(alert, animated: true, completion: nil)
         }
-        shareFacebook(fortunes.randomFortune())
     }
 }
