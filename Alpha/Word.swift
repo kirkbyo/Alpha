@@ -76,20 +76,19 @@ class WordsController: UIViewController {
     //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
-        let share = Share(text: "\(word): \(definition)").shareTwitter(count(word))
-        if let twitter = share[0] as? SLComposeViewController {
-            self.presentViewController(twitter, animated: true, completion: nil)
-        } else if let alert = share[0] as? UIAlertController {
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        let Meaning = "\(word): \(definition)"
+        Share(text: Meaning).shareTwitter(count(Meaning), action: { sheet in
+            self.presentViewController(sheet, animated: true, completion: nil)
+            }, error: { alert in
+                self.presentViewController(alert, animated: true, completion: nil)
+        })
     }
     
     @IBAction func shareFacebook(sender: AnyObject) {
-        let share = Share(text: "\(word): \(definition)").shareFacebook()
-        if let facebook = share[0] as? SLComposeViewController {
-            self.presentViewController(facebook, animated: true, completion: nil)
-        } else if let alert = share[0] as? UIAlertController {
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        Share(text: "\(word): \(definition)").shareFacebook({ sheet in
+            self.presentViewController(sheet, animated: true, completion: nil)
+            }, error: { alert in
+                self.presentViewController(alert, animated: true, completion: nil)
+        })
     }
 }

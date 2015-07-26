@@ -77,20 +77,18 @@ class quotes: UIViewController {
     //============================//
     
     @IBAction func shareTweet(sender: AnyObject) {
-        let share = Share(text: Quote).shareTwitter(count(Quote))
-        if let twitter = share[0] as? SLComposeViewController {
-            self.presentViewController(twitter, animated: true, completion: nil)
-        } else if let alert = share[0] as? UIAlertController {
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        Share(text: Quote).shareTwitter(count(Quote), action: { sheet in
+            self.presentViewController(sheet, animated: true, completion: nil)
+            }, error: { alert in
+                self.presentViewController(alert, animated: true, completion: nil)
+        })
     }
     
     @IBAction func shareFacebook(sender: AnyObject) {
-        let share = Share(text: Quote).shareFacebook()
-        if let facebook = share[0] as? SLComposeViewController {
-            self.presentViewController(facebook, animated: true, completion: nil)
-        } else if let alert = share[0] as? UIAlertController {
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        Share(text: Quote).shareFacebook({ sheet in
+            self.presentViewController(sheet, animated: true, completion: nil)
+            }, error: { alert in
+                self.presentViewController(alert, animated: true, completion: nil)
+        })
     }
 }
