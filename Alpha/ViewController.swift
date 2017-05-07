@@ -32,17 +32,17 @@ class ViewController: UIViewController {
         let borderRadius: CGFloat = 1.5
         
         // Adds border on buttons
-        quotesButton.layer.borderColor = borderColor.CGColor
+        quotesButton.layer.borderColor = borderColor.cgColor
         quotesButton.layer.borderWidth = borderRadius
         
-        fortunesButton.layer.borderColor = borderColor.CGColor
+        fortunesButton.layer.borderColor = borderColor.cgColor
         fortunesButton.layer.borderWidth = borderRadius
         
-        wordsButton.layer.borderColor = borderColor.CGColor
+        wordsButton.layer.borderColor = borderColor.cgColor
         wordsButton.layer.borderWidth = borderRadius
         
         // Checks if time is greater then 3pm to change background
-        var currentTime = utility.currentTime()
+        let currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             backgroundView.image = UIImage(named: "home_background.png")
         } else {

@@ -28,14 +28,7 @@ class WordsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Checks if time is greater then 3pm to change background
-        var currentTime = utility.currentTime()
-        if (currentTime >= 15 ) {
-            backgroundView.image = UIImage(named: "home_background.png")
-        } else {
-            backgroundView.image = UIImage(named:"morning_home_background.png")
-        }
+        backgroundView = utility.changeBackgroundOnTime(backgroundView, images: ("morning_home_background.png", "home_background.png"))
     }
     
     var word: String = ""
@@ -45,13 +38,12 @@ class WordsController: UIViewController {
     //********** New Word *********//
     //============================//
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Generates a random number
-        func randomNumber(arrayLength: Int) -> Int {
-            var unsignedArrayCount = UInt32(arrayLength)
-            var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-            var randomNumber = Int(unsignedRandomNumber)
-            
+        func randomNumber(_ arrayLength: Int) -> Int {
+            let unsignedArrayCount = UInt32(arrayLength)
+            let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+            let randomNumber = Int(unsignedRandomNumber)
             
             return randomNumber
         }
@@ -75,20 +67,20 @@ class WordsController: UIViewController {
     //***** Sharing Features *****//
     //============================//
     
-    @IBAction func shareTweet(sender: AnyObject) {
+    @IBAction func shareTweet(_ sender: AnyObject) {
         let Meaning = "\(word): \(definition)"
-        Share(text: Meaning).shareTwitter(count(Meaning), action: { sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+        Share(Meaning).shareTwitter(Meaning.characters.count, action: { sheet in
+            self.present(sheet, animated: true, completion: nil)
             }, error: { alert in
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
         })
     }
     
-    @IBAction func shareFacebook(sender: AnyObject) {
-        Share(text: "\(word): \(definition)").shareFacebook({ sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+    @IBAction func shareFacebook(_ sender: AnyObject) {
+        Share("\(word): \(definition)").shareFacebook({ sheet in
+            self.present(sheet, animated: true, completion: nil)
             }, error: { alert in
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
         })
     }
 }

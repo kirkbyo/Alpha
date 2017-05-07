@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rkd-oG-IV9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rkd-oG-IV9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quotes-->
+        <!--Quotes Controller-->
         <scene sceneID="OWp-At-QqE">
             <objects>
-                <viewController id="dDy-SU-oWP" customClass="quotes" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dDy-SU-oWP" customClass="QuotesController" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o8C-cw-Qyw"/>
                         <viewControllerLayoutGuide type="bottom" id="IvB-cy-LF2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="McN-AJ-dJI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hUt-7Z-Xc9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2r-eW-2oR">
-                                <rect key="frame" x="41" y="115" width="518" height="310"/>
+                                <rect key="frame" x="41" y="115" width="293" height="310"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="V4n-Tj-ouO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2Z-w3-rAp">
-                                <rect key="frame" x="156" y="76" width="288" height="21"/>
+                                <rect key="frame" x="43.5" y="76" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="5VN-Eh-An8"/>
                                     <constraint firstAttribute="height" constant="21" id="NyS-UI-iYV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-yB-AQn">
-                                <rect key="frame" x="272" y="100" width="56" height="2"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.79215686269999996" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="159.5" y="100" width="56" height="2"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.79215686269999996" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="NcO-oe-9YQ"/>
                                     <constraint firstAttribute="width" constant="56" id="sZN-1Q-okl"/>
@@ -51,26 +56,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsR-RE-due">
-                                <rect key="frame" x="108" y="535" width="45" height="45"/>
+                                <rect key="frame" x="108" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Y8a-Ux-ex1"/>
                                     <constraint firstAttribute="width" constant="45" id="efT-Ue-4cF"/>
                                 </constraints>
                                 <state key="normal" image="Facebook-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareFacebook:" destination="dDy-SU-oWP" eventType="touchUpInside" id="xpw-aE-JzG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-qi-tYP">
-                                <rect key="frame" x="447" y="535" width="45" height="45"/>
+                                <rect key="frame" x="222" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6je-o1-Kbm"/>
                                     <constraint firstAttribute="width" constant="45" id="stG-0X-qpj"/>
                                 </constraints>
                                 <state key="normal" image="Twitter-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareTweet:" destination="dDy-SU-oWP" eventType="touchUpInside" id="Y0Y-CQ-Xh6"/>
@@ -83,14 +88,14 @@
                                     <constraint firstAttribute="width" constant="25" id="oWd-wu-ByF"/>
                                 </constraints>
                                 <state key="normal" image="back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="rkd-oG-IV9" kind="show" id="DxY-ig-ibl"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K2r-eW-2oR" firstAttribute="top" secondItem="e5w-yB-AQn" secondAttribute="bottom" constant="13" id="2rV-8o-Nfo"/>
                             <constraint firstItem="tsR-RE-due" firstAttribute="leading" secondItem="McN-AJ-dJI" secondAttribute="leadingMargin" constant="92" id="9pz-Uo-I4Y"/>
@@ -131,63 +136,63 @@
                         <viewControllerLayoutGuide type="bottom" id="qUw-yq-pkg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zi6-gH-ntb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning_home_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2p-nR-GRR">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alpha-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MD8-Rg-SFT">
-                                <rect key="frame" x="242" y="39" width="116" height="79"/>
+                                <rect key="frame" x="129.5" y="39" width="116" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="7nW-O8-nrr"/>
                                     <constraint firstAttribute="height" constant="79" id="hxi-if-DUO"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MK-Eb-fGt">
-                                <rect key="frame" x="170" y="285" width="260" height="43"/>
+                                <rect key="frame" x="57.5" y="285" width="260" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="GFZ-EW-dyc"/>
                                     <constraint firstAttribute="width" constant="260" id="wz4-cY-Qhy"/>
                                 </constraints>
                                 <state key="normal" title="Fortunes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Yf6-qX-Y0J" kind="presentation" id="Jdt-f1-3SK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZn-sT-DDq">
-                                <rect key="frame" x="170" y="348" width="260" height="43"/>
+                                <rect key="frame" x="57.5" y="348" width="260" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="KGk-i3-5Ir"/>
                                     <constraint firstAttribute="height" constant="43" id="wN2-ic-dff"/>
                                 </constraints>
                                 <state key="normal" title="Words">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="EFv-oL-d1I" kind="presentation" id="pMi-LI-fhD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79S-rR-dnj">
-                                <rect key="frame" x="170" y="222" width="260" height="43"/>
+                                <rect key="frame" x="58" y="222" width="260" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="3tb-ZU-beP"/>
                                     <constraint firstAttribute="width" constant="260" id="JyG-fE-Top"/>
                                 </constraints>
                                 <state key="normal" title="Quotes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="dDy-SU-oWP" kind="presentation" id="s5R-8Z-Q0W"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="eZn-sT-DDq" secondAttribute="centerX" id="99O-hz-MH7"/>
                             <constraint firstAttribute="centerX" secondItem="79S-rR-dnj" secondAttribute="centerX" id="BqU-XM-V8b"/>
@@ -215,36 +220,36 @@
             </objects>
             <point key="canvasLocation" x="801" y="1181"/>
         </scene>
-        <!--Fortunes-->
+        <!--Fortunes Controller-->
         <scene sceneID="uU7-YT-352">
             <objects>
-                <viewController id="Yf6-qX-Y0J" customClass="Fortunes" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yf6-qX-Y0J" customClass="FortunesController" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kCV-Le-rsy"/>
                         <viewControllerLayoutGuide type="bottom" id="jNC-Ns-YZu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J12-sZ-MXn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortune_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="eey-zf-KgH">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjC-XS-8xP">
-                                <rect key="frame" x="108" y="535" width="45" height="45"/>
+                                <rect key="frame" x="108" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="rFu-3r-3At"/>
                                     <constraint firstAttribute="width" constant="45" id="wI1-Aw-zRJ"/>
                                 </constraints>
                                 <state key="normal" image="Facebook-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareFacebook:" destination="Yf6-qX-Y0J" eventType="touchUpInside" id="VMQ-ct-IRe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hc-X5-rFD">
-                                <rect key="frame" x="447" y="535" width="45" height="45"/>
+                                <rect key="frame" x="222" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="dtR-Oa-hxu"/>
                                     <constraint firstAttribute="width" constant="45" id="i0E-C2-gq4"/>
@@ -252,7 +257,7 @@
                                     <constraint firstAttribute="height" constant="45" id="wUb-iW-gbY"/>
                                 </constraints>
                                 <state key="normal" image="Twitter-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -271,39 +276,38 @@
                                     <constraint firstAttribute="width" constant="25" id="GoR-wd-psD"/>
                                 </constraints>
                                 <state key="normal" image="back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="rkd-oG-IV9" kind="show" id="KRx-oY-Rqp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fortune" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTG-3Z-ft8">
-                                <rect key="frame" x="250" y="39" width="101" height="21"/>
+                                <rect key="frame" x="137" y="39" width="101" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="fDt-5i-LDQ"/>
                                     <constraint firstAttribute="height" constant="21" id="sva-5c-YAU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a new fortune" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ6-5a-nQl">
-                                <rect key="frame" x="65" y="157" width="471" height="202"/>
+                                <rect key="frame" x="65" y="157" width="246" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="bv7-8j-irv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="2hc-X5-rFD" secondAttribute="bottom" constant="20" id="1KT-Bo-aY7"/>
                             <constraint firstItem="HTG-3Z-ft8" firstAttribute="top" secondItem="kCV-Le-rsy" secondAttribute="bottom" constant="19" id="3Mk-eP-7Oe"/>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="eey-zf-KgH" secondAttribute="bottom" id="6jI-KX-WrE"/>
                             <constraint firstItem="2hc-X5-rFD" firstAttribute="leading" secondItem="KjC-XS-8xP" secondAttribute="trailing" constant="154" id="7Li-Dp-d3b"/>
-                            <constraint firstAttribute="centerX" secondItem="LQ6-5a-nQl" secondAttribute="centerX" id="7bi-cJ-DwY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2hc-X5-rFD" secondAttribute="trailing" constant="92" id="8cA-KL-7qj"/>
                             <constraint firstItem="zlM-gi-Tyz" firstAttribute="top" secondItem="kCV-Le-rsy" secondAttribute="bottom" constant="13" id="9F9-qs-3m0"/>
                             <constraint firstItem="jNC-Ns-YZu" firstAttribute="top" secondItem="KjC-XS-8xP" secondAttribute="bottom" constant="20" id="ECt-rI-KX1"/>
@@ -345,29 +349,29 @@
                         <viewControllerLayoutGuide type="bottom" id="iPT-Mz-7oY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tgx-uK-OGU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="word_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-OL-a2I">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for a word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-0L-v8H">
-                                <rect key="frame" x="16" y="156" width="568" height="21"/>
+                                <rect key="frame" x="16" y="156" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="atw-Ko-iD5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-1K-pcs">
-                                <rect key="frame" x="447" y="535" width="45" height="45"/>
+                                <rect key="frame" x="222" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="3oc-eP-Y0G"/>
                                     <constraint firstAttribute="height" constant="45" id="GmL-SD-Fac"/>
                                 </constraints>
                                 <state key="normal" image="Twitter-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareTweet:" destination="EFv-oL-d1I" eventType="touchUpInside" id="l9g-Gc-z7c"/>
@@ -380,42 +384,43 @@
                                     <constraint firstAttribute="width" constant="25" id="uDo-DO-4eC"/>
                                 </constraints>
                                 <state key="normal" image="back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="rkd-oG-IV9" kind="show" id="F6x-03-7sA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-PC-iRU">
-                                <rect key="frame" x="108" y="535" width="45" height="45"/>
+                                <rect key="frame" x="108" y="602" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="6hO-0D-ZNJ"/>
                                     <constraint firstAttribute="height" constant="45" id="QhN-8k-cVe"/>
                                 </constraints>
                                 <state key="normal" image="Facebook-Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareFacebook:" destination="EFv-oL-d1I" eventType="touchUpInside" id="sLe-dE-rvC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-99-gIl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-99-gIl">
+                                <rect key="frame" x="16" y="185" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24D-56-XjU">
-                                <rect key="frame" x="250" y="39" width="101" height="21"/>
+                                <rect key="frame" x="137" y="39" width="101" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="701-6j-npy"/>
                                     <constraint firstAttribute="width" constant="101" id="H0w-sy-CEX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5ps-K4-rd1" firstAttribute="top" secondItem="vys-jj-UB5" secondAttribute="bottom" constant="13" id="1Vp-ph-KBP"/>
                             <constraint firstItem="5ps-K4-rd1" firstAttribute="leading" secondItem="Tgx-uK-OGU" secondAttribute="leadingMargin" id="1ki-1g-Wpn"/>
@@ -454,13 +459,13 @@
         <image name="Alpha-Logo" width="195" height="137"/>
         <image name="Facebook-Share" width="90" height="90"/>
         <image name="Twitter-Share" width="90" height="90"/>
-        <image name="back" width="61" height="71"/>
+        <image name="back" width="64" height="69"/>
         <image name="fortune_background.png" width="2344" height="1976"/>
         <image name="morning_home_background.png" width="2432" height="1728"/>
         <image name="quote_background.png" width="1347" height="1712"/>
         <image name="word_background.png" width="2520" height="2008"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F6x-03-7sA"/>
+        <segue reference="DxY-ig-ibl"/>
     </inferredMetricsTieBreakers>
 </document>

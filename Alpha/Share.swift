@@ -7,49 +7,52 @@
 //
 
 import Social
+
 struct Share {
     let text: String
-
-    init(text: String) {
+    var alert: UIAlertController
+    
+    init(_ text: String) {
         self.text = text
+        alert = UIAlertController()
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
     }
     
     typealias ShareSheet = SLComposeViewController
     
-    func shareTwitter(count: Int, action: (ShareSheet -> ()), error: (UIAlertController -> ())) { // Returns either tweetSheet or alert view
+    func shareTwitter(_ count: Int, action: ((ShareSheet) -> ()), error: ((UIAlertController) -> ())) { // Returns either tweetSheet or alert view
         if (count < 140) {
-            if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter)) {
+            if (ShareSheet.isAvailable(forServiceType: SLServiceTypeTwitter)) {
                 // Tweets Quote
-                var sheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                let sheet: ShareSheet = ShareSheet(forServiceType: SLServiceTypeTwitter)
                 sheet.setInitialText(text)
                 action(sheet)
             } else {
                 // Not logged into Twitter
-                var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                alert.title = "Accounts"
+                alert.message = "Please login to a Twitter account to share"
                 error(alert)
             }
         } else {
             // Character Count is greater then 140
-            var alert = UIAlertController(title: "Character Count", message: "Sorry this is too long to tweet", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            alert.title = "Character Count"
+            alert.message = "Sorry this is too long to tweet"
             error(alert)
         }
     }
     
-    func shareFacebook(action: (ShareSheet -> ()), error: (UIAlertController -> ())) {
+    func shareFacebook(_ action: ((ShareSheet) -> ()), error: ((UIAlertController) -> ())) {
         // Shares Quotes to facebook
-        if (SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook)) {
+        if (ShareSheet.isAvailable(forServiceType: SLServiceTypeFacebook)) {
             // Shares Quote
-            var sheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let sheet: ShareSheet = ShareSheet(forServiceType: SLServiceTypeFacebook)
             sheet.setInitialText(text)
             action(sheet)
         } else {
             // Not logged into facebook
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a facebook account to share", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            alert.title = "Accounts"
+            alert.message = "Please login to a facebook account to share"
             error(alert)
         }
     }
-    
 }

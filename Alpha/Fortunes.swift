@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Social
 
-class Fortunes: UIViewController {
+class FortunesController: UIViewController {
     //============================//
     //****** Outlet & Actions ****//
     //============================//
@@ -28,7 +28,7 @@ class Fortunes: UIViewController {
         super.viewDidLoad()
         
         // Checks if time is greater then 3pm to change background
-        var currentTime = utility.currentTime()
+        let currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             fortuneBackground.image = UIImage(named: "fortune_background.png")
         } else {
@@ -44,7 +44,7 @@ class Fortunes: UIViewController {
     let fortunes = fortunesGroup()
     var fortune: String = ""
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         fortune = fortunes.randomFortune()
         displayFortune.text = fortune
     }
@@ -54,19 +54,19 @@ class Fortunes: UIViewController {
     //***** Sharing Features *****//
     //============================//
     
-    @IBAction func shareTweet(sender: AnyObject) {
-       Share(text: fortune).shareTwitter(count(fortune), action: { sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+    @IBAction func shareTweet(_ sender: AnyObject) {
+       Share(fortune).shareTwitter(fortune.characters.count, action: { sheet in
+            self.present(sheet, animated: true, completion: nil)
         }, error: { alert in
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         })
     }
     
-    @IBAction func shareFacebook(sender: AnyObject) {
-        Share(text: fortune).shareFacebook({ sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+    @IBAction func shareFacebook(_ sender: AnyObject) {
+        Share(fortune).shareFacebook({ sheet in
+            self.present(sheet, animated: true, completion: nil)
         }, error: { alert in
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         })
     }
 }

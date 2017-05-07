@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Social
 
-class quotes: UIViewController {
+class QuotesController: UIViewController {
     
     //============================//
     //********** Outlets *********//
@@ -25,7 +25,7 @@ class quotes: UIViewController {
     //********** General *********//
     //============================//
     
-    let date = NSDate()
+    let date = Date()
     var Author: String = ""
     var Quote: String = ""
     
@@ -33,7 +33,7 @@ class quotes: UIViewController {
         super.viewDidLoad()
         
         // Checks if time is greater then 3pm to change background
-        var currentTime = utility.currentTime()
+        let currentTime = utility.currentTime()
         if (currentTime >= 15 ) {
             quoteBackground.image = UIImage(named: "quote_background.png")
         } else {
@@ -45,12 +45,12 @@ class quotes: UIViewController {
     //********* New Quote ********//
     //============================//
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Generates Random Number
-        func randomNumber(arrayLength: Int) -> Int {
-            var unsignedArrayCount = UInt32(arrayLength)
-            var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-            var randomNumber = Int(unsignedRandomNumber)
+        func randomNumber(_ arrayLength: Int) -> Int {
+            let unsignedArrayCount = UInt32(arrayLength)
+            let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+            let randomNumber = Int(unsignedRandomNumber)
             
             
             return randomNumber
@@ -68,7 +68,7 @@ class quotes: UIViewController {
         Quote = chosenQuote
         
         quoteDisplay.text = Quote
-        authorDisplay.text = Author.uppercaseString
+        authorDisplay.text = Author.uppercased()
     }
     
     
@@ -76,19 +76,19 @@ class quotes: UIViewController {
     //***** Social Features ******//
     //============================//
     
-    @IBAction func shareTweet(sender: AnyObject) {
-        Share(text: Quote).shareTwitter(count(Quote), action: { sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+    @IBAction func shareTweet(_ sender: AnyObject) {
+        Share(Quote).shareTwitter(Quote.characters.count, action: { sheet in
+            self.present(sheet, animated: true, completion: nil)
             }, error: { alert in
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
         })
     }
     
-    @IBAction func shareFacebook(sender: AnyObject) {
-        Share(text: Quote).shareFacebook({ sheet in
-            self.presentViewController(sheet, animated: true, completion: nil)
+    @IBAction func shareFacebook(_ sender: AnyObject) {
+        Share(Quote).shareFacebook({ sheet in
+            self.present(sheet, animated: true, completion: nil)
             }, error: { alert in
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
         })
     }
 }

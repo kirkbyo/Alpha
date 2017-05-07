@@ -77,9 +77,9 @@ struct fortunesGroup {
     ]
     
     func randomFortune() -> String {
-        var unsignedArrayCount = UInt32(fortuneArray.count)
-        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-        var randomNumber = Int(unsignedRandomNumber)
+        let unsignedArrayCount = UInt32(fortuneArray.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        let randomNumber = Int(unsignedRandomNumber)
         
         return fortuneArray[randomNumber]
     }

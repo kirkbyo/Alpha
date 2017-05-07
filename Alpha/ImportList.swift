@@ -12,7 +12,7 @@ struct ImportList {
     let path: String
     
     init(FileName: String) {
-        self.path = NSBundle.mainBundle().pathForResource("\(FileName)", ofType: "plist")!
+        self.path = Bundle.main.path(forResource: "\(FileName)", ofType: "plist")!
     }
     
     var dict: Dictionary<String, String> {
@@ -20,7 +20,7 @@ struct ImportList {
     }
     
     var array: Array<AnyObject> {
-        return [String](map(dict.keys) { $0 as AnyObject as! String })
+        return [String](dict.keys.map { $0 as AnyObject as! String }) as Array<AnyObject>
     }
     
     func count() -> Int {

@@ -7,19 +7,28 @@
 //
 
 import Foundation
-import Social
 import UIKit
 
 
 struct Utility {
     
     func currentTime() -> Int {
-        let calendar = NSCalendar.currentCalendar()
-        var date = NSDate()
-        let components = calendar.components(.CalendarUnitHour, fromDate: date)
+        let calendar = Calendar.current
+        let date = Date()
+        let components = (calendar as NSCalendar).components(.hour, from: date)
         let hour = components.hour
         
-        return hour
+        return hour!
+    }
+    
+    func changeBackgroundOnTime(_ background: UIImageView, images: (day: String, night: String)) -> UIImageView {
+        let (day, night) = images
+        if (currentTime() >= 15) {
+            background.image = UIImage(named: night)
+        } else {
+            background.image = UIImage(named: day)
+        }
+        return background
     }
     
 }

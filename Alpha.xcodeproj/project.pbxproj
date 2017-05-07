@@ -15,13 +15,12 @@
 		D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0280019F0843D001C4C7F /* ViewController.swift */; };
 		D9B0280619F0843D001C4C7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280519F0843D001C4C7F /* Images.xcassets */; };
 		D9B0280919F0843D001C4C7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B0280719F0843D001C4C7F /* LaunchScreen.xib */; };
-		D9B0281519F0843E001C4C7F /* AlphaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0281419F0843E001C4C7F /* AlphaTests.swift */; };
 		D9B95AE21A184DCA0080610A /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B95AE11A184DCA0080610A /* Word.swift */; };
 		D9B95AE41A184E3A0080610A /* WordsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B95AE31A184E3A0080610A /* WordsList.plist */; };
 		D9B95AE71A1875F30080610A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B95AE61A1875F30080610A /* Utility.swift */; };
 		D9FC0E2B19F45988000B5EEC /* FortuneGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */; };
-		D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3019F46105000B5EEC /* fortunes.swift */; };
-		D9FC0E3B19F46D18000B5EEC /* quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3A19F46D18000B5EEC /* quotes.swift */; };
+		D9FC0E3119F46105000B5EEC /* Fortunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3019F46105000B5EEC /* Fortunes.swift */; };
+		D9FC0E3B19F46D18000B5EEC /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC0E3A19F46D18000B5EEC /* Quotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +46,12 @@
 		D9B0280819F0843D001C4C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D9B0280E19F0843E001C4C7F /* AlphaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B0281319F0843E001C4C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9B0281419F0843E001C4C7F /* AlphaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTests.swift; sourceTree = "<group>"; };
 		D9B95AE11A184DCA0080610A /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		D9B95AE31A184E3A0080610A /* WordsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WordsList.plist; sourceTree = "<group>"; };
 		D9B95AE61A1875F30080610A /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneGroup.swift; sourceTree = "<group>"; };
-		D9FC0E3019F46105000B5EEC /* fortunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fortunes.swift; sourceTree = "<group>"; };
-		D9FC0E3A19F46D18000B5EEC /* quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quotes.swift; sourceTree = "<group>"; };
+		D9FC0E3019F46105000B5EEC /* Fortunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fortunes.swift; sourceTree = "<group>"; };
+		D9FC0E3A19F46D18000B5EEC /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 		D9B0281119F0843E001C4C7F /* AlphaTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9B0281419F0843E001C4C7F /* AlphaTests.swift */,
 				D9B0281219F0843E001C4C7F /* Supporting Files */,
 			);
 			path = AlphaTests;
@@ -148,7 +145,7 @@
 		D9FC0E3919F46C6F000B5EEC /* Fortune */ = {
 			isa = PBXGroup;
 			children = (
-				D9FC0E3019F46105000B5EEC /* fortunes.swift */,
+				D9FC0E3019F46105000B5EEC /* Fortunes.swift */,
 				D9FC0E2A19F45988000B5EEC /* FortuneGroup.swift */,
 			);
 			name = Fortune;
@@ -157,7 +154,7 @@
 		D9FC0E3E19F46EE1000B5EEC /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
-				D9FC0E3A19F46D18000B5EEC /* quotes.swift */,
+				D9FC0E3A19F46D18000B5EEC /* Quotes.swift */,
 				D907B82E1A17EE4F004C6C67 /* QuotesList.plist */,
 			);
 			name = Quotes;
@@ -207,15 +204,19 @@
 		D9B027F119F0843D001C4C7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ozzie Kirkby";
 				TargetAttributes = {
 					D9B027F819F0843D001C4C7F = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 2N92EHKU84;
+						LastSwiftMigration = 0820;
 					};
 					D9B0280D19F0843E001C4C7F = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = D9B027F819F0843D001C4C7F;
 					};
 				};
@@ -272,8 +273,8 @@
 				D9B0280119F0843D001C4C7F /* ViewController.swift in Sources */,
 				D953ABED1B10EDB900F65620 /* Share.swift in Sources */,
 				D9B027FF19F0843D001C4C7F /* AppDelegate.swift in Sources */,
-				D9FC0E3B19F46D18000B5EEC /* quotes.swift in Sources */,
-				D9FC0E3119F46105000B5EEC /* fortunes.swift in Sources */,
+				D9FC0E3B19F46D18000B5EEC /* Quotes.swift in Sources */,
+				D9FC0E3119F46105000B5EEC /* Fortunes.swift in Sources */,
 				D9B95AE21A184DCA0080610A /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B0281519F0843E001C4C7F /* AlphaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,15 +321,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -363,8 +367,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,6 +378,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -381,6 +388,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -393,7 +401,9 @@
 				INFOPLIST_FILE = Alpha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirkbyo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -406,7 +416,9 @@
 				INFOPLIST_FILE = Alpha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirkbyo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -425,7 +437,9 @@
 				);
 				INFOPLIST_FILE = AlphaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirkbyo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alpha.app/Alpha";
 			};
 			name = Debug;
@@ -440,7 +454,9 @@
 				);
 				INFOPLIST_FILE = AlphaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirkbyo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alpha.app/Alpha";
 			};
 			name = Release;
